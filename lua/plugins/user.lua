@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
 
@@ -82,7 +80,7 @@ return {
       )
     end,
   },
-    {
+  {
     'salkin-mada/openscad.nvim',
     lazy = false,
     ft = { "scad" },
@@ -110,5 +108,9 @@ return {
       render_on_write = true,
     }
   },
-
+  {
+    "vhyrro/luarocks.nvim",
+    priority = 1000, -- Very high priority is required, luarocks.nvim should run as the first plugin in your config.
+    config = true,
+  }
 }
