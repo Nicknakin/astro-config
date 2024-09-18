@@ -77,6 +77,8 @@ return {
         -- ["<C-S>"] = false,
 
         ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
+        [",jq"] = { ":silent%!jq<CR>:set syntax=json<CR>", desc = "Parse and view json" },
+        [",jc"] = { ":silent%!jq -c<CR>:set syntax=json<CR>", desc = "Compress JSON" },
         [",retab"] = { ":%!astyle<CR>", desc = "Re-style file with astyle" },
         [",deimp"] = { "/{<Cr>v%xi;<Esc>", desc = "Remove everything between next brackets" },
         [",rename"] = { "gg0<c-v>GI\"<Esc>gg$<c-v>G$A\" <Esc>gg0<c-v>G$ygg0P<Esc>gg0<c-v>GImv <Esc>",
