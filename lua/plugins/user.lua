@@ -32,11 +32,6 @@ return {
     }
   },
   {
-    "vhyrro/luarocks.nvim",
-    priority = 1000, -- Very high priority is required, luarocks.nvim should run as the first plugin in your config.
-    config = true,
-  },
-  {
     'cameron-wags/rainbow_csv.nvim',
     config = true,
     ft = {
@@ -54,5 +49,11 @@ return {
         'RainbowDelimQuoted',
         'RainbowMultiDelim'
     }
+  },
+  {
+    'recap/nvim-redis',
+    config = function()
+        require('redis').setup()
+    end
   }
 }
